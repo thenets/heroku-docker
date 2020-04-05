@@ -25,3 +25,9 @@ cd /app
 
 php -S 0.0.0.0:${PORT}
 ```
+
+## Set application stack for container
+
+```bash
+heroku stack:set container -a <your_application_name>
+```
