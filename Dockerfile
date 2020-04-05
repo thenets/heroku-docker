@@ -1,6 +1,6 @@
 FROM alpine
 
-RUN apk add php
+RUN apk add php bash
 
 # Add source code
 WORKDIR /app
@@ -9,7 +9,6 @@ ADD ./src .
 # Add entrypoint and set permissions
 ADD ./entrypoint.sh /
 RUN chmod +x /entrypoint.sh
-RUN apk add bash
 
 # Setup port
 # don't work on Heroku
